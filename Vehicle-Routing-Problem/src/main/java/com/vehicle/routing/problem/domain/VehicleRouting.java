@@ -31,6 +31,7 @@ public class VehicleRouting {
         this.vehicle = vehicle;
     }
 
+
     public List<Location> getLocationList() {
         return locationList;
     }

@@ -7,21 +7,21 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Distance {
 
-    private List<List<Integer>> distances;
+    private List<List<Long>> distances;
 
     public Distance() {
 
     }
 
-    public Distance(List<List<Integer>> distances) {
+    public Distance(List<List<Long>> distances) {
         this.distances = distances;
     }
 
-    public List<List<Integer>> getDistances() {
+    public List<List<Long>> getDistances() {
         return distances;
     }
 
-    public void setDistances(List<List<Integer>> distances) {
+    public void setDistances(List<List<Long>> distances) {
         this.distances = distances;
     }
 

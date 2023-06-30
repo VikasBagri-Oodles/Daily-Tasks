@@ -13,7 +13,7 @@ public class VehicleRoutingConstraintProvider implements ConstraintProvider {
         return new Constraint[] {
 
                 // only HARD constraints
-                notAllLocations(constraintFactory),
+//                notAllLocations(constraintFactory),
                 notMinimumDistance(constraintFactory)
 
                 // no SOFT constraints

@@ -4,6 +4,7 @@ import org.optaplanner.core.api.domain.entity.PlanningEntity;
 import org.optaplanner.core.api.domain.variable.PlanningListVariable;
 import org.optaplanner.core.api.domain.variable.PlanningVariable;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @PlanningEntity
@@ -15,13 +16,17 @@ public class Vehicle {
     private int locationCount;
 
     @PlanningListVariable
-    private List<Location> route;
-    private Long minDistance;
+    private List<Location> route = new ArrayList<>();
+
+    private Long minDistance = Long.MAX_VALUE;
+
+    public Vehicle() {
+
+    }
     public Vehicle(Location start, Location end, int locationCount) {
         this.start = start;
         this.end = end;
         this.locationCount = locationCount;
-        minDistance = Long.MAX_VALUE;
     }
 
     public Location getStart() {
@@ -50,6 +55,10 @@ public class Vehicle {
 
     // gets route distance
     public Long getRouteDistance() {
+
+        if(route.size() < locationCount) {
+            return Long.MAX_VALUE;
+        }
 
         Long routeDistance = 0L;
 
