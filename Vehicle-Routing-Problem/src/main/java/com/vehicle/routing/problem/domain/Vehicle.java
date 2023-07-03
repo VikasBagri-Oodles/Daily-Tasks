@@ -18,6 +18,8 @@ public class Vehicle {
     @PlanningListVariable
     private List<Location> route = new ArrayList<>();
 
+    private List<Location> minRoute;
+
     private Long minDistance = Long.MAX_VALUE;
 
     public Vehicle() {
@@ -53,6 +55,10 @@ public class Vehicle {
         return minDistance;
     }
 
+    public List<Location> getMinRoute(){
+        return minRoute;
+    }
+
     // gets route distance
     public Long getRouteDistance() {
 
@@ -75,10 +81,17 @@ public class Vehicle {
 
         if(routeDistance < minDistance) {
             minDistance = routeDistance;
+            updateMinRoute();
         }
 
         return routeDistance;
 
+    }
+
+    private void updateMinRoute() {
+        // first empty the previous min route
+        minRoute = new ArrayList<>();
+        route.forEach(location -> minRoute.add(location));
     }
 
 }
