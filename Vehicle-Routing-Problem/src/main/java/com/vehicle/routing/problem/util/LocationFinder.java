@@ -1,9 +1,8 @@
 package com.vehicle.routing.problem.util;
 
 import com.vehicle.routing.problem.domain.Location;
-import com.vehicle.routing.problem.measurements.Coordinates;
-import com.vehicle.routing.problem.measurements.Point;
-import org.locationtech.jts.geom.Coordinate;
+import com.vehicle.routing.problem.matrix.Coordinates;
+import com.vehicle.routing.problem.matrix.Point;
 
 import java.util.ArrayList;
 import java.util.List;

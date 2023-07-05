@@ -1,7 +1,7 @@
 package com.vehicle.routing.problem.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.vehicle.routing.problem.measurements.Distance;
+import com.vehicle.routing.problem.matrix.Distance;
 
 public class JSONJavaConverter {
 

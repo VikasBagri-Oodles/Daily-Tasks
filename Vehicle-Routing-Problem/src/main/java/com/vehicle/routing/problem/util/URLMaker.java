@@ -1,7 +1,7 @@
 package com.vehicle.routing.problem.util;
 
-import com.vehicle.routing.problem.measurements.Coordinates;
-import com.vehicle.routing.problem.measurements.Point;
+import com.vehicle.routing.problem.matrix.Coordinates;
+import com.vehicle.routing.problem.matrix.Point;
 
 public class URLMaker {
 

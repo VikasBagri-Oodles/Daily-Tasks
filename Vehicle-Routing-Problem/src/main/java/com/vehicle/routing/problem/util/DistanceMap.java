@@ -1,7 +1,7 @@
 package com.vehicle.routing.problem.util;
 
 import com.vehicle.routing.problem.domain.Location;
-import com.vehicle.routing.problem.measurements.Distance;
+import com.vehicle.routing.problem.matrix.Distance;
 
 import java.util.HashMap;
 import java.util.List;
