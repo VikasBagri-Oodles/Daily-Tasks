@@ -5,7 +5,7 @@ import com.vehicle.routing.problem.matrix.Point;
 
 public class URLMaker {
 
-    public static String buildURL(String prefix, String suffix, String apiKey, Coordinates coordinates) {
+    public static String buildMatrixURL(String prefix, String suffix, String apiKey, Coordinates coordinates) {
 
         String url = "";
         for(int i = 0; i < coordinates.getPoints().size(); i++) {
@@ -17,6 +17,10 @@ public class URLMaker {
 
         return url;
 
+    }
+
+    public static String buildGeocodingURL(String prefix, String reverseGeocoding, String points, String apiKey) {
+        return prefix + reverseGeocoding + points + apiKey;
     }
 
 }

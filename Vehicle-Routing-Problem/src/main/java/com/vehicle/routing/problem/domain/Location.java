@@ -35,4 +35,9 @@ public class Location {
         this.distanceMap = distanceMap;
     }
 
+    @Override
+    public String toString() {
+        return "id: " + id + ", lat: " + lat + ", lon: " + lon;
+    }
+
 }
