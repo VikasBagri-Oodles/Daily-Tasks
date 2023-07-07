@@ -58,6 +58,8 @@ public class ShortestRouteService {
             throw new IllegalStateException("Failed solving :(", e);
         }
 
+        System.out.println(solution.getVehicle().getMinDistance());
+
         List<Location> shortestRoute = solution.getVehicle().getMinRoute();
 
         // adding 'start' and 'end' locations

@@ -36,32 +36,6 @@ public class Controller {
     @Autowired
     private ShortestRouteService shortestRouteService;
 
-    @GetMapping("/reverse_geocoding")
-    public void reverseGeocoding() {
-
-        OkHttpClient client = new OkHttpClient();
-
-        String geocodingURL = URLMaker.buildGeocodingURL(
-                "https://graphhopper.com/api/1/geocode?",
-                "reverse=true&",
-                "point=28.4141132,77.0461935&",
-                "key=0b93a8dd-c892-405d-9e26-ec07561d1fe2");
-
-        Request request = new Request.Builder()
-                .url(geocodingURL)
-                .get()
-                .build();
-
-
-        try{
-            Response response = client.newCall(request).execute();
-            System.out.println(response.body().string());
-        } catch(IOException e) {
-            System.out.println(e.getMessage());
-        }
-
-    }
-
     @PostMapping("/solve")
     public List<Location> solve(@RequestBody Coordinates coordinates) {
 
